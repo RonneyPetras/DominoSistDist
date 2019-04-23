@@ -1,4 +1,3 @@
-
 package Modelo;
 
 public class TestaDomino {
@@ -13,9 +12,6 @@ public class TestaDomino {
 
         System.out.println(d1.estaConectado(d3));
 
-        System.out.println(d3.estaConectado(d1));
-
-       
+        System.out.println(d3.estaConectado(d1));  
     }
- 
 }

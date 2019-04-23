@@ -1,4 +1,3 @@
-
 package Modelo;
 
 public class Domino {
@@ -37,8 +36,7 @@ public class Domino {
     }
     public boolean conectarCom(Domino domino){
         int ladoDeLigacao = this.ligaCom(domino);
-        
-                
+                 
         if( ladoDeLigacao != -1 ){
             if( ladoDeLigacao == this.getLado1() ){
                 this.ligacao1 = domino;
@@ -59,10 +57,8 @@ public class Domino {
                 else{
                     domino.ligacao2 = this;
                 }
-                
                 return true;
-            }
-            
+            }  
         }
         return false;
     }
@@ -82,6 +78,18 @@ public class Domino {
         return this.lado2;
     }
 
+    public int ligacaoDisponivel(){
+        if(ligacao1 != null && ligacao2 != null){
+            return -2;
+        }else if(ligacao1 != null){
+            return this.getLado1();
+        }else if(ligacao2 != null){
+            return this.getLado2();
+        }else{
+            return -1;
+        }
+    }
+    
     public Domino getLigacao1() {
         return ligacao1;
     }
@@ -96,7 +104,6 @@ public class Domino {
 
     @Override
     public String toString() {
-        return "\nDomino{" + "lado1=" + lado1 + ", lado2=" + lado2 + ", bucha=" + bucha + '}';
+        return "\nDomino{" + "lado1= " + lado1 + ", lado2= " + lado2 + ", bucha=" + bucha + '}';
     }
-    
 }
