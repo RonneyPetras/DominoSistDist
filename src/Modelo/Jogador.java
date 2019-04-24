@@ -16,7 +16,7 @@ public class Jogador {
 
     public Domino deita(Domino domino){
         int idex = mao.indexOf(domino);
-        if(this.mao.size()==0){
+        if(this.mao.isEmpty()){
             System.out.println("Mão está vazia");
             return null;
         }else{
@@ -25,7 +25,7 @@ public class Jogador {
     }
     
     public Domino deita(int dominoPosicao){
-        if(this.mao.size()==0){
+        if(this.mao.isEmpty()){
             System.out.println("Mão está vazia");
             return null;
         }else{
@@ -35,6 +35,10 @@ public class Jogador {
     
     public Domino dominoNumero(int dominoPosicao){
         return mao.get(dominoPosicao);
+    }
+
+    public ArrayList<Domino> getMao() {
+        return mao;
     }
     
     @Override
